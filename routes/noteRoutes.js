@@ -8,15 +8,15 @@ const Note = require('../models/note');
 // Basic Authentication Middleware
 const basicAuth = (req, res, next) => {
     const authHeader = req.headers.authorization;
-  
+ 
     if (!authHeader || !authHeader.startsWith('Basic ')) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
-  
+
     const base64Credentials = authHeader.split(' ')[1];
     const credentials = Buffer.from(base64Credentials, 'base64').toString('ascii');
     const email = req.body.email;
-  
+    
     if (email === process.env.EMAIL) { 
       next();
     } else {
