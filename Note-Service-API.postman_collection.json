@@ -1,0 +1,547 @@
+{
+	"info": {
+		"_postman_id": "8ca341e4-54f1-401d-940a-11c5d9005e6c",
+		"name": "Note-Service-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24106690"
+	},
+	"item": [
+		{
+			"name": "Create Note",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "simra",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "@postman123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Backend Task\",\r\n    \"content\": \"Project related to the CRUD operations\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/notes/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Note",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Backend Task\",\r\n    \"content\": \"Project related to the CRUD operations\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/notes/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notes",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "194"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c2-GqsNkb2iSxQKCBUYZSXIN7DqypI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 17:08:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Backend Task\",\n    \"content\": \"Project related to the CRUD operations\",\n    \"_id\": \"65959474e6830d78fa1b153b\",\n    \"createdAt\": \"2024-01-03T17:08:04.210Z\",\n    \"updatedAt\": \"2024-01-03T17:08:04.210Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve all notes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "simra",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "@postman123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/notes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retrieve all notes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/notes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "196"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c4-rI01KoaXL6l0VTOeiMU2pX4bC/Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 17:09:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"65959474e6830d78fa1b153b\",\n        \"title\": \"Backend Task\",\n        \"content\": \"Project related to the CRUD operations\",\n        \"createdAt\": \"2024-01-03T17:08:04.210Z\",\n        \"updatedAt\": \"2024-01-03T17:08:04.210Z\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "Retrieve all notes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/notes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "400"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"190-6ZXD/4h3QVNBzP8LEbhhzp9faqI\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 17:59:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"659597685402082a5c8ce488\",\n        \"title\": \"Backend Task\",\n        \"content\": \"Project related to the CRUD operations in Nodejs\",\n        \"createdAt\": \"2024-01-03T17:20:40.552Z\",\n        \"updatedAt\": \"2024-01-03T17:57:57.160Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6595a06972ac146ec3a3f887\",\n        \"title\": \"Frontend Task\",\n        \"content\": \"Project related to website home page\",\n        \"createdAt\": \"2024-01-03T17:59:05.517Z\",\n        \"updatedAt\": \"2024-01-03T17:59:05.518Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Retrieve particular note",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "simra",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "@postman123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/notes/659597685402082a5c8ce488",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"659597685402082a5c8ce488"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/notes/65959474e6830d78fa1b153b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notes",
+								"65959474e6830d78fa1b153b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "194"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c2-pxJBsPDIQUR653AvzdSxMtYUgBA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 17:10:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"65959474e6830d78fa1b153b\",\n    \"title\": \"Backend Task\",\n    \"content\": \"Project related to the CRUD operations\",\n    \"createdAt\": \"2024-01-03T17:08:04.210Z\",\n    \"updatedAt\": \"2024-01-03T17:08:04.210Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Update the note",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "simra",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "@postman123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Backend Task\",\r\n    \"content\": \"Project related to the CRUD operations in Nodejs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/notes/659597685402082a5c8ce488",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"659597685402082a5c8ce488"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update the note",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Backend Task\",\r\n    \"content\": \"Project related to the CRUD operations in Nodejs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/notes/659597685402082a5c8ce488",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notes",
+								"659597685402082a5c8ce488"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "204"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cc-/bXkVbBfKj864zIL7XvyXXWlPhM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 17:57:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"659597685402082a5c8ce488\",\n    \"title\": \"Backend Task\",\n    \"content\": \"Project related to the CRUD operations in Nodejs\",\n    \"createdAt\": \"2024-01-03T17:20:40.552Z\",\n    \"updatedAt\": \"2024-01-03T17:57:57.160Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete the note",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "simra",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "@postman123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/notes/659597685402082a5c8ce488",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"notes",
+						"659597685402082a5c8ce488"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete the note",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/notes/659597685402082a5c8ce488",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notes",
+								"659597685402082a5c8ce488"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-eRA9GiVZL6kII4bX/HmG//anwi0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Jan 2024 18:00:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Note deleted successfully\"\n}"
+				}
+			]
+		}
+	]
+}
