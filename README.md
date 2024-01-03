@@ -24,7 +24,6 @@ npm install
 ```
 DB_URI=<MongoDB URI>
 PORT=3000
-JWT_KEY=<key>
 ```
 
 5. Run the server 
